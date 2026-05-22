@@ -1,0 +1,121 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Page */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f7fa;
+  padding: 40px;
+}
+
+/* Main container */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* Cards */
+section {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Make these sections full width */
+#expense-section,
+#expense-list-section {
+  grid-column: span 2;
+}
+
+/* Titles */
+h2 {
+  margin-bottom: 15px;
+}
+
+/* Inputs */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+input,
+select {
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+/* Buttons */
+button {
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4cafef;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3b9ad9;
+}
+
+/* Summary */
+.summary-item {
+  margin-bottom: 10px;
+}
+
+/* Expense list */
+#expense-list {
+  list-style: none;
+  margin-top: 10px;
+}
+
+#expense-list li {
+  background: #f9f9f9;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+/* Delete button */
+.delete-btn {
+  background-color: #ff4d4d;
+  padding: 6px 10px;
+  font-size: 12px;
+}
+
+.delete-btn:hover {
+  background-color: #e63939;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  #expense-section,
+  #expense-list-section {
+    grid-column: span 1;
+  }
+}
